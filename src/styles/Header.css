@@ -1,0 +1,129 @@
+/* General Header */
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px 16px;
+  }
+  
+  .header-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .store-name{
+    align-self: center;
+    color: #111827;
+    font-size: 16px;
+  }
+  .logo-container img.logo {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    align-self: flex-start;
+  }
+  
+  /* Menu button */
+  .menu-button-wrapper {
+    position: relative;
+  }
+  
+  .menu-button {
+    padding: 4px;
+    border-radius: 6px;
+    background: none;
+    border: none;
+    margin-right: 29px;
+    cursor: pointer;
+    background-color: #111827;
+  }
+  
+  .menu-button:hover {
+    background-color:#213d79 ;
+  }
+  
+  /* Dropdown menu */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    width: 160px;
+    background-color: #111827; /* dark gray */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 40;
+  }
+  
+  .menu-list {
+    padding: 8px 0;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    background-color: #213d79; /* slightly lighter dark */
+  }
+  
+  /* Logout specific (optional style) */
+  .menu-item.logout {
+    font-weight: normal;
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    z-index: 30;
+  }
+  
+  .icon-with-badge {
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .floating-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 2px 6px;
+    min-width: 4px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    z-index: 1;
+  }
+  
+  
