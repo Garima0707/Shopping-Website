@@ -1,0 +1,63 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: #3498db;
+  }
+  
+  .profile-card {
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .profile-avatar {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 100px;
+  }
+  
+  .profile-name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .profile-email,
+  .profile-role {
+    margin: 6px 0;
+    color: #555;
+  }
+  
+  .logout-btn,
+  .edit-btn,
+  .save-btn,
+  .cancel-btn {
+    margin: 10px 5px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .logout-btn {
+    background-color: #e74c3c;
+  }
+  
+  .edit-btn {
+    background-color: #3498db;
+  }
+  
+  .save-btn {
+    background-color: #2ecc71;
+  }
+  
+  .cancel-btn {
+    background-color: #95a5a6;
+  }
+  

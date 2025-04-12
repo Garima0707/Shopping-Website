@@ -4,12 +4,13 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Cart from './pages/CartPage';
 import ProductDetail from './pages/ProductDetail';
+import Profile from './pages/Profile';
 import { ToastContainer } from 'react-toastify';
 import Header from './components/Header';
 
 function App() {
-  const location = useLocation(); // ✅ Get current path
-
+  const location = useLocation();
+  const isLoginPage = location.pathname === '/';
   return (
     <>
       {/* Show Header only if not on login page */}
@@ -22,6 +23,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );

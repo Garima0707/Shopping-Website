@@ -40,15 +40,23 @@ function Login() {
     e.preventDefault();
     setLoading(true);
     setError('');
-
+  
     try {
       const res = await axios.post('https://fakestoreapi.com/auth/login', {
         username,
         password,
       });
-
+  
       if (res.data && res.data.token) {
         localStorage.setItem('token', res.data.token);
+  
+        // 🔐 Get userId by matching username
+        const usersRes = await axios.get('https://fakestoreapi.com/users');
+        const user = usersRes.data.find((u) => u.username === username);
+        if (user) {
+          localStorage.setItem('userId', user.id);
+        }
+  
         toast.success("Login Successful!!");
         setTimeout(() => {
           navigate('/home');
@@ -64,7 +72,7 @@ function Login() {
       setLoading(false);
     }
   };
-
+  
   return (
     <div className="login-wrapper">
       <form className="login-form" ref={formRef} onSubmit={handleLogin}>
