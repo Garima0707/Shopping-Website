@@ -44,6 +44,9 @@ header {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 90px);
+  padding-top: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* FilterBar, heading, etc. */
@@ -54,17 +57,37 @@ header {
   color: #111827;
 }
 
+.home-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.1rem;
+}
+
+@media (min-width: 768px) {
+  .home-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 /* Scrollable product grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-
-  /* Make grid scrollable */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
   max-height: calc(100vh - 240px);
   overflow-y: auto;
   padding-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* Scrollbar styles */
@@ -89,4 +112,14 @@ header {
   .product-grid {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
+}
+
+.products-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.filter-bar-wrapper {
+  display: flex;
+  gap: 0.5rem;
 }

@@ -3,7 +3,6 @@ import axios from 'axios';
 import ProductCard from '../components/ProductCard';
 import FilterBar from '../components/FilterBar';
 import SearchBar from '../components/SearchBar';
-import Header from '../components/Header';  
 import '../styles/Home.css';
 
 function Home() {
@@ -30,19 +29,17 @@ function Home() {
 
   return (
     <>
-      <div className="home-container pt-16 px-4">
-        {/* Product Section Title */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 mt-6">
-  <div className="flex justify-between items-center mb-6 mt-6 px-2">
-    <h1 className="text-2xl font-bold">Products</h1>
+      <div className="home-container">
+        {/* Section Title */}
+        <div className="home-header">
+          <h1 className="products-title">Products</h1>
+          <div className="filter-bar-wrapper">
+            <FilterBar setCategory={setCategory} setSearchTerm={setSearchTerm} />
+          </div>
+        </div>
 
-    <div className="flex gap-2 md:gap-4">
-      <FilterBar setCategory={setCategory} setSearchTerm={setSearchTerm} />
-    </div>
-  </div>
-</div>
         {/* Product Grid */}
-        <div className="product-grid grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="product-grid">
           {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
